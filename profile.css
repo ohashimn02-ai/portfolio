@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+    color: #333;
+    background: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+
+/* ===== 固定ナビゲーション ===== */
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0c2c6b;
+    border: 1.5px solid #0c2c6b;
+    padding: 6px 28px;
+    border-radius: 20px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background: #0c2c6b;
+    color: #fff;
+}
+
+/* コンテンツが隠れないように余白を作る */
+body {
+    padding-top: 90px; /* ナビの高さに合わせて調整 */
+}
+
+
+
+
+/* About */
+.about-flex {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-img {
+    width: 350px;
+}
+
+.about-text {
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+.jp-name {
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.eng-name {
+    font-size: 16px;
+}
+
+/* Skills */
+.skills-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+
+.skill-item h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    
+}
+
+.dots span {
+    width: 25px;
+    height: 25px;
+    background: #1e3d8f;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.dots span.off {
+    background: #d0d6e5;
+}
+
+/* Strength */
+.strength-flex {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.strength-item {
+    width: 32%;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.strength-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #e6edfb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.strength-sub {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.strength-body {
+    background: #ffffff;
+    border: 2px solid #d9e4fa;
+    border-radius: 12px;
+    padding: 18px 20px;
+    position: relative;
+}
+
+.strength-body::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-left: 2px solid #d9e4fa;
+    border-top: 2px solid #d9e4fa;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+
+/* History */
+.history-item {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.history-item .time {
+    color: #1e3d8f;
+    font-size: 20px;
+    min-width: 90px;
+}
+
+.history-item p {
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+.history-section {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding-left: 30px;
+}
+
+/* 縦線 */
+.history-section::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #d1dbf2;
+    border-radius: 2px;
+}
+
+
+.history-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+.history-item .time {
+    font-size: 22px;
+    color: #1e3d8f;
+    font-weight: 500;
+font-family: 'Times New Roman', Times, serif;
+}
+
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 25px;
+}
+
+
+
+/* 画面幅600px以下のスマホ向け調整 */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Aboutセクションの見出しサイズを少し小さく */
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* プロフィール画像を中央寄せにし、サイズ調整 */
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    /* 名前・紹介テキスト部分の幅を広げてレイアウトを縦並びに */
+    .profile-info {
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    /* 名前のフォントサイズを少し下げて収まりを良く */
+    .profile-info h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /* テキスト段落の幅制限を解除して、余白も減らす */
+    .profile-info p {
+        max-width: 100%;
+        margin: 0 auto 15px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    /* スキルのラベルの配置調整 */
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    /* スキル各項目は幅100%または50%で縦積みに */
+    .skill-item {
+        flex: 1 1 45%;
+        min-width: 140px;
+    }
+
+    /* スキル名のフォントサイズを少し小さく */
+    .skill-name {
+        font-size: 14px;
+    }
+
+    /* 強みエリアの丸やテキストの幅を調整 */
+    .strengths {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .strength-item {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .strength-title {
+        font-size: 20px;
+    }
+
+    .strength-desc {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    /* HISTORYの縦ラインを維持しつつ幅調整 */
+    .history-container {
+        width: 95%;
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+
+    .history-item {
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+
+    .history-date {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .history-desc {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+

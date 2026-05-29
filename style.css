@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+
+/* Base */
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+    color: #333;
+    background: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+
+.section-title {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+/* Top Title Animation*/
+.main-hero {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.4s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #0c2c6b;
+    border: 1.5px solid #0c2c6b;
+    padding: 6px 28px;
+    border-radius: 20px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background: #0c2c6b;
+    color: #fff;
+}
+
+/* Main Visual */
+.main-visual {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-illust {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.mv-title {
+    font-size: 34px;
+    margin-top: 15px;
+}
+
+.mv-sub {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Works Section*/
+.works-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.work-box img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.work-box:hover img {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+
+.work-box h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.work-tag {
+    width: 100px;
+    background: #0c2c6b;
+    padding: 6px 15px 6px 30px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #fff;
+}
+
+
+
+/* Profile Section */
+.profile-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 350px;
+}
+
+.profile-tags span {
+    background: #e7ecf8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #0c2c6b;
+}
+.profile-text h3 {
+    font-size: 30px;
+}
+
+.profile-text span {
+    font-size: 20px;
+} 
+
+.profile-text p {
+    line-height: 2;
+    font-size: 20px;
+}
+
+.more-btn {
+    display: inline-block;
+    background: #1e3d8f;
+    color: #fff;
+    padding: 14px 50px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.more-btn:hover {
+     background: #fff;
+    color: #1e3d8f;
+    border: 2px solid #1e3d8f;
+}
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 25px;
+}
+
+
+
+
+
+
+/* モバイル（スマホ）用レイアウト
+   max-width: 768px 以下をスマホとして調整 */
+@media screen and (max-width: 768px) {
+
+
+    /*  HEROタイトル  */
+    .main-hero {
+        height: 220px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    /*  ナビゲーション  */
+    .main-nav ul {
+        gap: 20px;
+    }
+
+    .main-nav a {
+        padding: 6px 18px;
+        font-size: 13px;
+    }
+
+    /* メインビジュアル  */
+    .main-illust {
+        width: 200px;
+    }
+
+    .mv-title {
+        font-size: 26px;
+    }
+
+    .mv-sub {
+        font-size: 14px;
+    }
+
+    /*  WORKS */
+    .works-grid {
+        grid-template-columns: 1fr;  
+        gap: 35px;
+        width: 90%;
+    }
+
+    .work-box h3 {
+        font-size: 18px;
+    }
+    .work-tag {
+        font-size: 12px;
+    }
+
+    /* PROFILE  */
+    .profile-box {
+        flex-direction: column; 
+        text-align: center;
+        width: 90%;
+    }
+
+    .profile-img {
+        width: 180px;
+    }
+
+    .profile-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .profile-tags span {
+        display: inline-block;
+        margin: 6px 4px;
+        font-size: 12px;
+    }
+
+    .more-btn {
+        font-size: 16px;
+        padding: 12px 42px;
+    }
+
+    /*  セクションタイトル  */
+    .section-title {
+        font-size: 26px;
+        margin-top: 60px;
+        margin-bottom: 35px;
+    }
+}
+
+
